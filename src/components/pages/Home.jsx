@@ -1,10 +1,10 @@
-import { Box, Heading, Text, Stack } from '@chakra-ui/react'
+import { Box, Heading, Text, Stack, Link } from '@chakra-ui/react'
 import React from 'react'
+import About from './About'
 
 const Home = () => {
   return (
     <Stack
-    border='solid 1px red'
       py={130}
       px={{ base: 5, md: 100 }}
       spacing={10}
@@ -30,9 +30,10 @@ const Home = () => {
         _hover={{
           bgGradient: 'linear(to-r, red.500, yellow.500)',
         }}
-        onClick=''
       >
-       Resume
+        <Link href='../Abdus_Salam_Resume.pdf' download>
+          Resume
+        </Link>
       </Box>
     </Stack>
   )

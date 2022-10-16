@@ -13,11 +13,12 @@ const Navbar = () => {
             py={8}
             px={{base:5,md:100}}
             position='sticky'
+            top='0'
             boxShadow='lg'
             alignItems='center'
             gap='5'>
             <Button _hover={{ color: 'teal' }} variant='ghost'>
-                <Link as={ReactLink} to='/'>
+                <Link as={ReactLink} to='/#'>
                     <Text fontSize="2xl" >Abdus Salam</Text>
                 </Link>
             </Button>
