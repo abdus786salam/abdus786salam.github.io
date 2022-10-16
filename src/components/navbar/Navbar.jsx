@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link as ReactLink } from 'react-router-dom'
-import { Flex, Spacer, Link, HStack, Button, Text, Icon } from '@chakra-ui/react'
+import { Flex, Spacer, Link, HStack, Button, Text } from '@chakra-ui/react'
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
 import "./Navbar.css"
 import DrawerMenu from './DrowerMenu';
