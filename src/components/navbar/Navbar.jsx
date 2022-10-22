@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link as ReactLink } from 'react-router-dom'
-import { Flex, Spacer, Link, HStack, Button, Text } from '@chakra-ui/react'
+import { Flex, Spacer, Link, HStack, Button, Text, useColorModeValue } from '@chakra-ui/react'
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
 import "./Navbar.css"
 import DrawerMenu from './DrowerMenu';
@@ -14,6 +14,7 @@ const Navbar = () => {
             px={{base:5,md:100}}
             position='sticky'
             top='0'
+            bg={useColorModeValue('gray.200', 'gray.700')}
             boxShadow='lg'
             alignItems='center'
             gap='5'>

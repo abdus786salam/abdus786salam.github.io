@@ -1,10 +1,11 @@
-import { Box, Flex, Heading, VStack, Stack, Text, Image, Center } from '@chakra-ui/react'
+import { Box, Flex, Heading, VStack, Stack, Text, Image, Center, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
 
 const About = () => {
   return (
     <VStack
       py={100}
+      bg={useColorModeValue('purple.100', 'black.500')}
       px={{ base: 5, md: 100 }}>
       <Text fontSize='3xl' textDecoration='underline' textUnderlineOffset='20px'>About me</Text>
       <Stack spacing={20} direction={{ base: 'column', md: 'row' }}>

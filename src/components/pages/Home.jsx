@@ -1,12 +1,13 @@
-import { Box, Heading, Text, Stack, Link } from '@chakra-ui/react'
+import { Box, Heading, Text, Stack, Link, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
-import About from './About'
+
 
 const Home = () => {
   return (
     <Stack
       py={130}
       px={{ base: 5, md: 100 }}
+      bg={useColorModeValue('purple.100', 'black.500')}
       spacing={10}
     >
       <Text fontSize='2xl'>Hello!, I'm a</Text>
