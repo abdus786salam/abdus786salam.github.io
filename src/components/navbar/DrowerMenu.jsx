@@ -12,9 +12,9 @@ import {
     DrawerContent,
     DrawerCloseButton,
     VStack,
-    useDisclosure
+    useDisclosure,
+    useColorModeValue
 } from "@chakra-ui/react"
-import { ColorModeSwitcher } from "../../ColorModeSwitcher"
 
 function DrawerMenu() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -22,18 +22,22 @@ function DrawerMenu() {
 
     return (
         <>
-            <Button  display={{ base: "flex", md: "none" }} _hover={{ color: 'teal' }} variant='ghost' ref={btnRef} onClick={onOpen}>
-                <Icon  w={6} h={6} as={HamburgerIcon} />
+            <Button
+                display={{ base: "flex", md: "none" }}
+                _hover={{ color: 'teal' }} variant='ghost'
+                ref={btnRef}
+                onClick={onOpen}>
+                <Icon w={6} h={6} as={HamburgerIcon} />
             </Button>
             <Drawer
                 isOpen={isOpen}
-                placement='top'
+                placement='left'
                 onClose={onClose}
                 finalFocusRef={btnRef}
                 size='sm'
             >
                 <DrawerOverlay />
-                <DrawerContent>
+                <DrawerContent bg={useColorModeValue('gray.200', 'gray.900')}>
                     <DrawerCloseButton />
                     <DrawerBody>
                         <VStack>
@@ -62,7 +66,7 @@ function DrawerMenu() {
                                     <Text fontSize="xl" >Contact</Text>
                                 </Link>
                             </Button>
-                            <ColorModeSwitcher justifySelf="flex-end" />
+
                         </VStack>
                     </DrawerBody>
 

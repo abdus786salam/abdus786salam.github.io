@@ -24,6 +24,21 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+/* .profiletitle{
+  animation: tagline 10s  infinite alternate;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid rgb(3, 82, 125); 
+} */
+
+@keyframes tagline {
+  0% {
+      width: 0ch;
+  }
+  50% {
+      width: 22ch;
+  }
+}
 
 .App-link {
   color: #61dafb;

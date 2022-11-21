@@ -5,13 +5,14 @@ import React from 'react'
 const Home = () => {
   return (
     <Stack
+    id='home'
       py={130}
       px={{ base: 5, md: 100 }}
-      bg={useColorModeValue('purple.100', 'black.500')}
+      bg={useColorModeValue('gray.200', 'gray.900')}
       spacing={10}
     >
       <Text fontSize='2xl'>Hello!, I'm a</Text>
-      <Heading as='h1' size='4xl'
+      <Heading className='profiletitle' as='h1' size={{base:'xl',md:'4xl'}}
         bgGradient='linear(to-l,  #b92b27, #004E92)'
         bgClip='text'
         _hover={{

@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link as ReactLink } from 'react-router-dom'
-import { Flex, Spacer, Link, HStack, Button, Text, useColorModeValue } from '@chakra-ui/react'
+import { Flex, Spacer, HStack, Button, Text, useColorModeValue } from '@chakra-ui/react'
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
 import "./Navbar.css"
 import DrawerMenu from './DrowerMenu';
+import { HashLink } from 'react-router-hash-link';
 
 
 const Navbar = () => {
@@ -11,51 +11,49 @@ const Navbar = () => {
     return (
         <Flex
             py={8}
-            px={{base:5,md:100}}
+            px={{ base: 5, md: 100 }}
             position='sticky'
             top='0'
-            bg={useColorModeValue('gray.200', 'gray.700')}
+            bg={useColorModeValue('gray.200', 'gray.900')}
             boxShadow='lg'
             alignItems='center'
             gap='5'>
             <Button _hover={{ color: 'teal' }} variant='ghost'>
-                <Link as={ReactLink} to='/#'>
-                    <Text fontSize="2xl" >Abdus Salam</Text>
-                </Link>
+                <HashLink smooth to='#home'>
+                    <Text fontSize="2xl" >Portfolio</Text>
+                </HashLink>
             </Button>
             <Spacer />
-                    <DrawerMenu  />  
-                    <HStack display={{ base: "none", md: "flex" }}>
-                    <Button _hover={{ color: 'teal' }} variant='ghost'>
-                        <Link as={ReactLink} to='/'>
-                            <Text fontSize="xl" >Home</Text>
-                        </Link>
-                    </Button>
-                    <Button _hover={{ color: 'teal' }} variant='ghost'>
-                        <Link as={ReactLink} to='/about'>
-                            <Text fontSize="xl" >About</Text>
-                        </Link>
-                    </Button>
-                    <Button _hover={{ color: 'teal' }} variant='ghost'>
-                        <Link as={ReactLink} to='/skills'>
-                            <Text fontSize="xl" >Skills</Text>
-                        </Link>
-                    </Button>
-                    <Button _hover={{ color: 'teal' }} variant='ghost'>
-                        <Link as={ReactLink} to='/projects'>
-                            <Text fontSize="xl" >Projects</Text>
-                        </Link>
-                    </Button>
-                    <Button _hover={{ color: 'teal' }} variant='ghost'>
-                        <Link as={ReactLink} to='/contact'>
-                            <Text fontSize="xl" >Contact</Text>
-                        </Link>
-                    </Button>
-                    <ColorModeSwitcher justifySelf="flex-end" />
-                </HStack> 
-            
+            <DrawerMenu />
 
-
+            <HStack display={{ base: "none", md: "flex" }}>
+                <Button _hover={{ color: 'teal' }} variant='ghost'>
+                    <HashLink  smooth to='#home'>
+                        <Text fontSize="xl" >Home</Text>
+                    </HashLink >
+                </Button>
+                <Button _hover={{ color: 'teal' }} variant='ghost'>
+                    <HashLink smooth to='#about'>
+                        <Text fontSize="xl" >About</Text>
+                    </HashLink>
+                </Button>
+                <Button _hover={{ color: 'teal' }} variant='ghost'>
+                    <HashLink smooth to='#skills'>
+                        <Text fontSize="xl" >Skills</Text>
+                    </HashLink>
+                </Button>
+                <Button _hover={{ color: 'teal' }} variant='ghost'>
+                    <HashLink smooth to='#projects'>
+                        <Text fontSize="xl" >Projects</Text>
+                    </HashLink>
+                </Button>
+                <Button _hover={{ color: 'teal' }} variant='ghost'>
+                    <HashLink smooth to='#contact'>
+                        <Text fontSize="xl" >Contact</Text>
+                    </HashLink>
+                </Button>
+            </HStack>
+            <ColorModeSwitcher justifySelf="flex-end" />
         </Flex>
     )
 }
