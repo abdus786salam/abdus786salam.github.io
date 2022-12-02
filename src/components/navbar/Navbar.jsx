@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Spacer, HStack, Button, Text, useColorModeValue } from '@chakra-ui/react'
+import { Flex, Spacer, HStack, Button, Text, useColorModeValue, Link } from '@chakra-ui/react'
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
 import "./Navbar.css"
 import DrawerMenu from './DrowerMenu';
@@ -28,7 +28,7 @@ const Navbar = () => {
 
             <HStack display={{ base: "none", md: "flex" }}>
                 <Button _hover={{ color: 'teal' }} variant='ghost'>
-                    <HashLink  smooth to='#home'>
+                    <HashLink smooth to='#home'>
                         <Text fontSize="xl" >Home</Text>
                     </HashLink >
                 </Button>
@@ -52,6 +52,20 @@ const Navbar = () => {
                         <Text fontSize="xl" >Contact</Text>
                     </HashLink>
                 </Button>
+                <Link href='./assets/Abdus_Salam_Resume.pdf' download>
+                    <Button 
+                     fontSize='xl'
+                     color='white'
+                     borderRadius='md'
+                     bgGradient='linear(to-r, teal.500, green.500)'
+                     _hover={{
+                       bgGradient: 'linear(to-r, red.500, yellow.500)',
+                     }}
+                    variant='ghost'>
+                        <Text >Resume</Text>
+                    </Button>
+                </Link>
+
             </HStack>
             <ColorModeSwitcher justifySelf="flex-end" />
         </Flex>

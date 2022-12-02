@@ -5,14 +5,14 @@ import React from 'react'
 const Home = () => {
   return (
     <Stack
-    id='home'
+      id='home'
       py={130}
       px={{ base: 5, md: 100 }}
       bg={useColorModeValue('gray.200', 'gray.900')}
       spacing={10}
     >
       <Text fontSize='2xl'>Hello!, I'm a</Text>
-      <Heading className='profiletitle' as='h1' size={{base:'xl',md:'4xl'}}
+      <Heading className='profiletitle' as='h1' size={{ base: 'xl', md: '4xl' }}
         bgGradient='linear(to-l,  #b92b27, #004E92)'
         bgClip='text'
         _hover={{
@@ -20,23 +20,23 @@ const Home = () => {
           bgGradient: 'linear(to-r, red.500, yellow.500)',
         }}
       >Full Stack Web Developer</Heading>
-      <Box
-        as='button'
-        px={10}
-        py={4}
-        w={200}
-        fontSize='2xl'
-        color='white'
-        borderRadius='md'
-        bgGradient='linear(to-r, teal.500, green.500)'
-        _hover={{
-          bgGradient: 'linear(to-r, red.500, yellow.500)',
-        }}
-      >
-        <Link href='../Abdus_Salam_Resume.pdf' download>
+      <Link href='./assets/Abdus_Salam_Resume.pdf' download>
+        <Box
+          as='button'
+          px={10}
+          py={4}
+          w={200}
+          fontSize='2xl'
+          color='white'
+          borderRadius='md'
+          bgGradient='linear(to-r, teal.500, green.500)'
+          _hover={{
+            bgGradient: 'linear(to-r, red.500, yellow.500)',
+          }}
+        >
           Resume
-        </Link>
-      </Box>
+        </Box>
+      </Link>
     </Stack>
   )
 }
