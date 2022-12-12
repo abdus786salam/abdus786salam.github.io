@@ -66,6 +66,19 @@ function DrawerMenu() {
                                     <Text fontSize="xl" >Contact</Text>
                                 </Link>
                             </Button>
+                            <Link href='./assets/Abdus_Salam_Resume.pdf' download > 
+                                <Button
+                                    fontSize='xl'
+                                    color='white'
+                                    borderRadius='md'
+                                    bgGradient='linear(to-r, teal.500, green.500)'
+                                    _hover={{
+                                        bgGradient: 'linear(to-r, red.500, yellow.500)',
+                                    }}
+                                    variant='ghost'>
+                                    <Text >Resume</Text>
+                                </Button>
+                            </Link>
 
                         </VStack>
                     </DrawerBody>

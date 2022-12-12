@@ -1,9 +1,10 @@
 import React from 'react'
-import { Flex, Spacer, HStack, Button, Text, useColorModeValue, Link } from '@chakra-ui/react'
+import { Flex, Spacer, HStack, Button, Text, useColorModeValue, Link, Tooltip, Icon } from '@chakra-ui/react'
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
 import "./Navbar.css"
 import DrawerMenu from './DrowerMenu';
 import { HashLink } from 'react-router-hash-link';
+import {  HiDownload } from "react-icons/hi";
 
 
 const Navbar = () => {
@@ -52,20 +53,21 @@ const Navbar = () => {
                         <Text fontSize="xl" >Contact</Text>
                     </HashLink>
                 </Button>
-                <Link href='./assets/Abdus_Salam_Resume.pdf' download>
-                    <Button 
-                     fontSize='xl'
-                     color='white'
-                     borderRadius='md'
-                     bgGradient='linear(to-r, teal.500, green.500)'
-                     _hover={{
-                       bgGradient: 'linear(to-r, red.500, yellow.500)',
-                     }}
-                    variant='ghost'>
-                        <Text >Resume</Text>
-                    </Button>
-                </Link>
-
+                <Tooltip label='download resume' hasArrow >
+                    <Link href='./assets/Abdus_Salam_Resume.pdf' download>
+                        <Button
+                            fontSize='xl'
+                            color='white'
+                            borderRadius='md'
+                            bgGradient='linear(to-r, teal.500, green.500)'
+                            _hover={{
+                                bgGradient: 'linear(to-r, red.500, yellow.500)',
+                            }}
+                            variant='ghost'>
+                            <Text ><Icon as={HiDownload} mr={1} /> Resume</Text>
+                        </Button>
+                    </Link>
+                </Tooltip>
             </HStack>
             <ColorModeSwitcher justifySelf="flex-end" />
         </Flex>
