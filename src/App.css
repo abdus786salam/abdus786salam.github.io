@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
   background-color: #282c34;
 }
@@ -23,7 +23,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 /* .profiletitle{
   animation: tagline 10s  infinite alternate;
   overflow: hidden;
@@ -31,7 +31,7 @@
   border-right: 3px solid rgb(3, 82, 125); 
 } */
 
-@keyframes tagline {
+/* @keyframes tagline {
   0% {
       width: 0ch;
   }
@@ -51,4 +51,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

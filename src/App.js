@@ -1,5 +1,6 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Divider, useColorModeValue } from '@chakra-ui/react';
 import './App.css';
+import Github from './components/github/GitHub';
 import Navbar from './components/navbar/Navbar';
 import About from './components/pages/about/About';
 import Contact from './components/pages/contact/Contact';
@@ -12,10 +13,17 @@ function App() {
     <Box>
      <Navbar/>
      <Home />
+     <Divider borderColor="#85b2ec" border='2px' w='auto' />
      <About />
+     <Divider borderColor="#85b2ec" border='2px' w='auto' />
      <Projects />
+     <Divider borderColor="#85b2ec" border='2px' w='auto' />
      <Skills />
+     <Divider borderColor="#85b2ec" border='2px' w='auto' />
+     <Github />
+     <Divider borderColor="#85b2ec" border='2px' w='auto' />
      <Contact />
+     <Divider borderColor="#85b2ec" border='2px' w='auto' />
     </Box>
   );
 }

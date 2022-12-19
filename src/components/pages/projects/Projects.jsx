@@ -1,25 +1,16 @@
 import React from "react";
-import {
-  Box,
-  Heading,
-  Text,
-  Stack,
-  Link,
-  useColorModeValue,
-  SimpleGrid,
-  VStack,
-  Flex,
-  Image,
-} from "@chakra-ui/react";
+import { Heading, useColorModeValue, VStack, Grid } from "@chakra-ui/react";
 import ProjectBox from "./ProjectBox";
+import { projectDetails } from "./projectDetails";
 const Projects = () => {
   return (
     <VStack
+      py={50}
       id="projects"
-      p={{base:10,md:100}}
+      px={{ base: 10, lg: 100 }}
       bg={useColorModeValue("purple.100", "black.500")}
     >
-      <Text
+      <Heading
         fontSize="3xl"
         mb={5}
         py={50}
@@ -28,8 +19,15 @@ const Projects = () => {
         textUnderlineOffset="20px"
       >
         Projects
-      </Text>
-      <ProjectBox />
+      </Heading>
+      <Grid
+        templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(2, 1fr)" }}
+        gap={6}
+      >
+        {projectDetails.map((project, i) => (
+          <ProjectBox key={i} {...project} />
+        ))}
+      </Grid>
     </VStack>
   );
 };

@@ -7,81 +7,76 @@ import {
   HStack,
   Icon,
   Image,
-  Stack,
   Text,
   Tooltip,
   VStack,
 } from "@chakra-ui/react";
-import {
-  SiHtml5,
-  SiCss3,
-  SiJavascript,
-  SiReact,
-  SiChakraui,
-  SiGithub,
-} from "react-icons/si";
+
 import React from "react";
-import { Link } from "react-router-dom";
+import { SiGithub } from "react-icons/si";
 
-const techStack = [
-  { logo: SiHtml5, name: "HTML", color: "tomato" },
-  { logo: SiCss3, name: "CSS", color: "blue" },
-  { logo: SiJavascript, name: "JavaScript", color: "yellow.400" },
-  { logo: SiReact, name: "React", color: "blue.400" },
-  { logo: SiChakraui, name: "Chakra-UI", color: "blue.400" },
-];
 
-const ProjectBox = () => {
+const ProjectBox = ({
+  projectTitle,
+  projectType,
+  projectImage,
+  projectDiscription,
+  projectGithubLink,
+  projectDeployLink,
+  techStack,
+}) => {
   return (
     <Flex
       boxShadow="outline"
       rounded="md"
       p={{ base: 5, md: 10 }}
-      mx={50}
+      // mx={50}
       gap={10}
-      // borderRadius={10}
-      direction={{ base: "column", md: "row" }}
     >
-      <Box flex={1.5}>
-        <Image
-          src="../assets/projectStuff/coSchedule1.JPG"
-          boxSize="borderBox"
-          alt="photo"
-        />
-      </Box>
-      <Box flex={1}>
-        <VStack spacing={10}>
-          <Heading fontSize="xl">
-            Clone Of CoSchedule
-            <Badge ml={2} p={1} variant="outline" colorScheme="teal">
-              Individual
-            </Badge>
+      <Box>
+        <VStack spacing={5}>
+          <Heading fontSize="2xl">
+            {projectTitle}
+            <Tooltip label="Project type" placement="top" hasArrow>
+              <Badge ml={2} p={1} variant="outline" colorScheme="teal">
+               {projectType}
+              </Badge>
+            </Tooltip>
           </Heading>
 
-          <Text fontSize="lg" textAlign="justify">
-            CoShedule is social media managing app. Using this App user can
-            manage different social media accounts and projects. They schedule
-            their social media posts and also track their project progress.
+          <Box>
+            <Image
+              src={projectImage}
+              boxSize="borderBox"
+              alt={`${projectTitle} ${" "} image`}
+            />
+          </Box>
+
+          <Text fontSize={{ base: "lg", md: "2xl" }} textAlign="justify">
+           {projectDiscription}
           </Text>
-          <HStack spacing={{ md: 5 }}>
-            {techStack?.map((item) => (
-              <Tooltip label={item.name} hasArrow>
-                <span>
-                  <Icon
-                    bg="white"
-                    color={item.color}
-                    fontSize="6xl"
-                    as={item.logo}
-                  />
-                </span>
-              </Tooltip>
-            ))}
+          <HStack spacing={5}>
+            {techStack?.map(
+              (item, i) => (
+                <Tooltip key={i + 1} label={item.name} hasArrow>
+                  <span>
+                    <Icon
+                      bg="white"
+                      color={item.color}
+                      fontSize={{ base: "4xl", md: "6xl" }}
+                      as={item.logo}
+                    />
+                  </span>
+                </Tooltip>
+              ),
+              0
+            )}
           </HStack>
           <HStack spacing={20}>
             <Tooltip label="Code Base" hasArrow>
               <Button size="lg">
                 <a
-                  href="https://github.com/abdus786salam/ambiguous-class-8142"
+                  href={projectGithubLink}
                   target="_blank"
                 >
                   <span>
@@ -91,20 +86,25 @@ const ProjectBox = () => {
               </Button>
             </Tooltip>
             <Tooltip label="Code Base" hasArrow>
-              <Button
-                fontSize="xl"
-                px={10}
-                py={4}
-                color="white"
-                borderRadius="md"
-                bgGradient="linear(to-r, teal.500, green.500)"
-                _hover={{
-                  bgGradient: "linear(to-r, red.500, yellow.500)",
-                }}
-                variant="ghost"
+              <a
+                href={projectDeployLink}
+                target="_blank"
               >
-                <Text>Live</Text>
-              </Button>
+                <Button
+                  fontSize="xl"
+                  px={10}
+                  py={4}
+                  color="white"
+                  borderRadius="md"
+                  bgGradient="linear(to-r, teal.500, green.500)"
+                  _hover={{
+                    bgGradient: "linear(to-r, red.500, yellow.500)",
+                  }}
+                  variant="ghost"
+                >
+                  <Text>Live</Text>
+                </Button>
+              </a>
             </Tooltip>
           </HStack>
         </VStack>

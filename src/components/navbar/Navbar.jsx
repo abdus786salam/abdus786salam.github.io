@@ -12,13 +12,16 @@ const Navbar = () => {
     return (
         <Flex
             py={8}
-            px={{ base: 5, md: 100 }}
+            zIndex='1'
+            // style={{"zIndex":1}}
+            px={{ base: 5, md: 'auto'}}
             position='sticky'
             top='0'
             bg={useColorModeValue('gray.200', 'gray.900')}
             boxShadow='lg'
             alignItems='center'
-            gap='5'>
+
+            >
             <Button _hover={{ color: 'teal' }} variant='ghost'>
                 <HashLink smooth to='#home'>
                     <Text fontSize="2xl" >Portfolio</Text>
@@ -27,7 +30,7 @@ const Navbar = () => {
             <Spacer />
             <DrawerMenu />
 
-            <HStack display={{ base: "none", md: "flex" }}>
+            <HStack display={{ base: "none", lg: "flex" }}>
                 <Button _hover={{ color: 'teal' }} variant='ghost'>
                     <HashLink smooth to='#home'>
                         <Text fontSize="xl" >Home</Text>
@@ -54,7 +57,7 @@ const Navbar = () => {
                     </HashLink>
                 </Button>
                 <Tooltip label='download resume' hasArrow >
-                    <Link href='./assets/Abdus_Salam_Resume.pdf' download>
+                    <Link href='./assets/Abdus_Salam_Resume.pdf' target="_blank" download>
                         <Button
                             fontSize='xl'
                             color='white'
