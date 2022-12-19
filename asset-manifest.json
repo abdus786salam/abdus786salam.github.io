@@ -1,15 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.3a9a08e6.css",
-    "main.js": "/static/js/main.3aeeedd2.js",
+    "main.css": "/static/css/main.44d17864.css",
+    "main.js": "/static/js/main.10df6b30.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/express.svg": "/static/media/express.54e9be4af84f8a184dc6691f2ddd532a.svg",
+    "static/media/html.svg": "/static/media/html.4395a089ee4b1338c0e94e212b6dd055.svg",
+    "static/media/nodejs.svg": "/static/media/nodejs.829c557e87571a03ac6b4713a42d6013.svg",
+    "static/media/bootstrap.svg": "/static/media/bootstrap.527d0fc09fb3280153c26f0046a517a9.svg",
+    "static/media/reactjs.svg": "/static/media/reactjs.76e2275041bf32657448561ae4ed1dff.svg",
+    "static/media/mongo.svg": "/static/media/mongo.464a4e8bb6d791cfa542bd7b0faa2507.svg",
+    "static/media/css.svg": "/static/media/css.aec31ad6887c3a820a1b3b8e2b9d9937.svg",
+    "static/media/typescriptlogo.svg": "/static/media/typescriptlogo.7c2e5f599fa6ccab4be8a590908ec5bb.svg",
+    "static/media/git.svg": "/static/media/git.da7cbb7e0f60abd807f4ef40cc3da768.svg",
     "index.html": "/index.html",
-    "main.3a9a08e6.css.map": "/static/css/main.3a9a08e6.css.map",
-    "main.3aeeedd2.js.map": "/static/js/main.3aeeedd2.js.map",
+    "static/media/js.svg": "/static/media/js.0dd1cf6c80bb500c655a617006c1148a.svg",
+    "main.44d17864.css.map": "/static/css/main.44d17864.css.map",
+    "main.10df6b30.js.map": "/static/js/main.10df6b30.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3a9a08e6.css",
-    "static/js/main.3aeeedd2.js"
+    "static/css/main.44d17864.css",
+    "static/js/main.10df6b30.js"
   ]
 }
