@@ -1,33 +1,38 @@
 import {
   Box,
   Img,
+  Text,
   Tooltip,
   useColorModeValue,
+  VStack,
 } from "@chakra-ui/react";
 import React from "react";
-import Marquee from "react-fast-marquee";
 
 const SkillBox = ({ title, src }) => {
   return (
+    <Tooltip label={title} placement="top" fontSize="md" hasArrow>
     <Box
+    m={5}
     borderRadius={5}
     _hover={{ transform: "scale(1.15)", transformOrigin: "50% 50%" }}
     transition="transform .5s"
-      bg={useColorModeValue("blackAlpha.50", "purple.100")}
-      h={{ base: 150, md: 170, lg: 200 }}
-      w={{ base: 150, md: 170, lg: 200 }}
-      overflow="hidden"
+      bg={useColorModeValue("blackAlpha.200", "purple.100")}
+      h={{ base: 120, md: 130, lg: 150 }}
+      w={{ base: 120, md: 130, lg: 150 }}
       p={5}
+      color={"black"}
     >
-      <Tooltip label={title} placement="top" fontSize="md" hasArrow>
+      <VStack>
         <Img
-          boxSize="90%"
+          boxSize="70%"
           _hover={{ transform: "scale(1.15)", transformOrigin: "50% 50%" }}
           transition="transform .5s"
           src={src}
         />
-      </Tooltip>
+        <Text>{title}</Text>
+        </VStack>
     </Box>
+      </Tooltip>
   );
 };
 

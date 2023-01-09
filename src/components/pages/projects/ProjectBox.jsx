@@ -38,7 +38,7 @@ const ProjectBox = ({
           <Heading fontSize="2xl">
             {projectTitle}
             <Tooltip label="Project type" placement="top" hasArrow>
-              <Badge ml={2} p={1} variant="outline" colorScheme="teal">
+              <Badge ml={2} p={1} variant="outline" colorScheme={projectType==="Group"?'teal':'red'}>
                {projectType}
               </Badge>
             </Tooltip>
@@ -59,14 +59,15 @@ const ProjectBox = ({
             {techStack?.map(
               (item, i) => (
                 <Tooltip key={i + 1} label={item.name} hasArrow>
-                  <span>
+                  <VStack>
                     <Icon
                       bg="white"
                       color={item.color}
                       fontSize={{ base: "4xl", md: "6xl" }}
                       as={item.logo}
                     />
-                  </span>
+                    <Text>{item.name}</Text>
+                  </VStack>
                 </Tooltip>
               ),
               0

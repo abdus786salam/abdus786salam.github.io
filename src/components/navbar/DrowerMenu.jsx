@@ -1,5 +1,4 @@
 import React from "react";
-import { Link as ReactLink } from "react-router-dom";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import {
   Button,
@@ -15,6 +14,7 @@ import {
   useDisclosure,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { HashLink } from "react-router-hash-link";
 
 function DrawerMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -32,14 +32,15 @@ function DrawerMenu() {
         <Icon w={6} h={6} as={HamburgerIcon} />
       </Button>
       <Drawer
+        
         isOpen={isOpen}
         placement="left"
         onClose={onClose}
         finalFocusRef={btnRef}
-        size="sm"
+        size="xs"
       >
-        <DrawerOverlay />
-        <DrawerContent bg={useColorModeValue("gray.200", "gray.900")}>
+        <DrawerOverlay  />
+        <DrawerContent maxHeight='max-content' bg={useColorModeValue("gray.200", "gray.900")}>
           <DrawerCloseButton />
           <DrawerBody>
             <VStack>
@@ -48,45 +49,45 @@ function DrawerMenu() {
                 onClick={onClose}
                 variant="ghost"
               >
-                <Link as={ReactLink} to="/">
-                  <Text fontSize="xl">Home</Text>
-                </Link>
+                 <HashLink smooth to='#home'>
+                        <Text fontSize="xl" >Home</Text>
+                    </HashLink >
               </Button>
               <Button
                 _hover={{ color: "teal" }}
                 onClick={onClose}
                 variant="ghost"
               >
-                <Link as={ReactLink} to="/about">
-                  <Text fontSize="xl">About</Text>
-                </Link>
+                <HashLink smooth to='#about'>
+                        <Text fontSize="xl" >About</Text>
+                    </HashLink>
               </Button>
               <Button
                 _hover={{ color: "teal" }}
                 onClick={onClose}
                 variant="ghost"
               >
-                <Link as={ReactLink} to="/skills">
-                  <Text fontSize="xl">Skills</Text>
-                </Link>
+               <HashLink smooth to='#skills'>
+                        <Text fontSize="xl" >Skills</Text>
+                    </HashLink>
               </Button>
               <Button
                 _hover={{ color: "teal" }}
                 onClick={onClose}
                 variant="ghost"
               >
-                <Link as={ReactLink} to="/projects">
-                  <Text fontSize="xl">Projects</Text>
-                </Link>
+               <HashLink smooth to='#projects'>
+                        <Text fontSize="xl" >Projects</Text>
+                    </HashLink>
               </Button>
               <Button
                 _hover={{ color: "teal" }}
                 onClick={onClose}
                 variant="ghost"
               >
-                <Link as={ReactLink} to="/contact">
-                  <Text fontSize="xl">Contact</Text>
-                </Link>
+                <HashLink smooth to='#contact'>
+                        <Text fontSize="xl" >Contact</Text>
+                    </HashLink>
               </Button>
               <Link href="./assets/Abdus_Salam_Resume.pdf" target="_blank" download>
                 <Button

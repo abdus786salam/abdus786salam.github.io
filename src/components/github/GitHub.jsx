@@ -61,7 +61,7 @@ function Github() {
           gap={{ base: "3", md: "10" }}
           gridTemplateColumns={{ base: "1fr", lg: "repeat(3,1fr)" }}
         >
-          <Image src="https://streak-stats.demolab.com/?user=abdus786salam&theme=nord&border_radius=30&date_format=M%20j%5B%2C%20Y%5D" />
+          <Image  src="https://streak-stats.demolab.com/?user=abdus786salam&theme=nord&border_radius=30&date_format=M%20j%5B%2C%20Y%5D" />
           <Image src="https://github-readme-stats.vercel.app/api/top-langs/?username=abdus786salam&layout=compact&theme=nord&border_radius=30" />
           <Image src="https://github-readme-stats.vercel.app/api?username=abdus786salam&count_private=true&theme=nord&border_radius=30" />
         </SimpleGrid>

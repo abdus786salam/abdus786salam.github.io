@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Heading,
   HStack,
@@ -10,6 +11,7 @@ import {
 import React from "react";
 import { SiGithub, SiGmail } from "react-icons/si";
 import { BsFillTelephoneFill, BsLinkedin } from "react-icons/bs";
+import { MdLocationPin } from "react-icons/md";
 
 const Contact = () => {
   return (
@@ -29,6 +31,7 @@ const Contact = () => {
         Contact Me
       </Heading>
       <VStack>
+        <Box>
         <HStack>
           <Icon as={SiGmail} /> <span>abdus786salam@gmail.com</span>
         </HStack>
@@ -37,6 +40,10 @@ const Contact = () => {
           <span>+917042135876</span>
         </HStack>
         <HStack>
+          <Icon as={MdLocationPin} />{" "}
+          <span>Bihar</span>
+        </HStack>
+        <HStack mt={10}>
           <Tooltip label="GitHub" hasArrow>
             <Button size="lg">
               <a
@@ -62,6 +69,7 @@ const Contact = () => {
             </Button>
           </Tooltip>
         </HStack>
+        </Box>
       </VStack>
     </VStack>
   );

@@ -1,4 +1,13 @@
-import { Flex, VStack, Text, Image, useColorModeValue, Heading, Box, Center } from "@chakra-ui/react";
+import {
+  Flex,
+  VStack,
+  Text,
+  Image,
+  useColorModeValue,
+  Heading,
+  Box,
+  Center,
+} from "@chakra-ui/react";
 import React from "react";
 
 const About = () => {
@@ -21,29 +30,27 @@ const About = () => {
       <Flex
         gap={20}
         alignItems="center"
-        justifyContent='center'
+        justifyContent="center"
         direction={{ base: "column", md: "row" }}
       >
-        <Box flex='1'>
+        <Box flex="1">
           <Center>
-
-        <Image
-       
-          src="https://img.freepik.com/premium-vector/simple-flat-vector-cartoon-illustration-man-figure-having-video-conference-with-group-people_24381-1416.jpg?w=826"
-          boxSize="300px"
-          borderRadius="full"
-          alt="photo"
-        />
+            <Image
+              src="https://img.freepik.com/premium-vector/simple-flat-vector-cartoon-illustration-man-figure-having-video-conference-with-group-people_24381-1416.jpg?w=826"
+              boxSize="300px"
+              borderRadius="full"
+              alt="photo"
+            />
           </Center>
-        </Box >
-        <Box  flex='1'>
-          
-        <Text fontSize={{base:"lg",md:"2xl"}} textAlign="justify">
-          Aspiring Full Stack Web Developer. Able to build Websites using HTML,
-          CSS and JavaScript. Hands-on experience in collaborative projects.
-          passionate about coding and strongly interested in working in a
-          product-based company.
-        </Text>
+        </Box>
+        <Box flex="1">
+          <Text fontSize={{ base: "lg", md: "2xl" }} textAlign="justify">
+            Dedicated full-time Full Stack Web Developer with 1000+ hours of
+            coding experience in HTML, CSS, MERN and Chakra-UI. Hands-on
+            experience in collaborative projects. Capable of writing
+            production-ready code. Looking to start a career as a web developer
+            with an organisation driven by technology.
+          </Text>
         </Box>
       </Flex>
     </VStack>

@@ -4,7 +4,7 @@ import { ColorModeSwitcher } from '../../ColorModeSwitcher';
 import "./Navbar.css"
 import DrawerMenu from './DrowerMenu';
 import { HashLink } from 'react-router-hash-link';
-import {  HiDownload } from "react-icons/hi";
+import {  HiArrowSmRight } from "react-icons/hi";
 
 
 const Navbar = () => {
@@ -12,7 +12,7 @@ const Navbar = () => {
     return (
         <Flex
             py={8}
-            zIndex='1'
+            zIndex='3'
             // style={{"zIndex":1}}
             px={{ base: 5, md: 'auto'}}
             position='sticky'
@@ -56,8 +56,8 @@ const Navbar = () => {
                         <Text fontSize="xl" >Contact</Text>
                     </HashLink>
                 </Button>
-                <Tooltip label='download resume' hasArrow >
-                    <Link href='./assets/Abdus_Salam_Resume.pdf' target="_blank" download>
+                <Tooltip label='resume' hasArrow >
+                    <Link href='./assets/Abdus_Salam_Resume.pdf' target="_blank">
                         <Button
                             fontSize='xl'
                             color='white'
@@ -67,7 +67,7 @@ const Navbar = () => {
                                 bgGradient: 'linear(to-r, red.500, yellow.500)',
                             }}
                             variant='ghost'>
-                            <Text ><Icon as={HiDownload} mr={1} /> Resume</Text>
+                            <Text >Resume <Icon as={HiArrowSmRight} pt={1} /></Text>
                         </Button>
                     </Link>
                 </Tooltip>
