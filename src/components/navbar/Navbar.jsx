@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Spacer, HStack, Button, Text, useColorModeValue, Link, Tooltip, Icon } from '@chakra-ui/react'
+import { Flex, Spacer, HStack, Button, Text, useColorModeValue, Link, Tooltip, Icon, Box } from '@chakra-ui/react'
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
 import "./Navbar.css"
 import DrawerMenu from './DrowerMenu';
@@ -8,12 +8,10 @@ import {  HiArrowSmRight } from "react-icons/hi";
 
 
 const Navbar = () => {
-    // const [isMobile, setMobile] = React.useState(false)
     return (
         <Flex
             py={8}
             zIndex='3'
-            // style={{"zIndex":1}}
             px={{ base: 5, md: 'auto'}}
             position='sticky'
             top='0'
@@ -56,19 +54,20 @@ const Navbar = () => {
                         <Text fontSize="xl" >Contact</Text>
                     </HashLink>
                 </Button>
-                <Tooltip label='resume' hasArrow >
-                    <Link href='./assets/Abdus_Salam_Resume.pdf' target="_blank">
-                        <Button
+                <Tooltip label='see resume' hasArrow>
+                    <Link  href='./assets/Abdus_Salam_Resume.pdf' target="_blank">
+                        <Box as='button'
                             fontSize='xl'
+                            p='2'
                             color='white'
                             borderRadius='md'
                             bgGradient='linear(to-r, teal.500, green.500)'
                             _hover={{
-                                bgGradient: 'linear(to-r, red.500, yellow.500)',
+                                bgGradient: 'linear(to-r, red.500, yellow.500)', 
                             }}
                             variant='ghost'>
                             <Text >Resume <Icon as={HiArrowSmRight} pt={1} /></Text>
-                        </Button>
+                        </Box>
                     </Link>
                 </Tooltip>
             </HStack>

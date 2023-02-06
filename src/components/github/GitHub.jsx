@@ -3,16 +3,16 @@ import {
   Heading,
   Image,
   SimpleGrid,
+  Tooltip,
   useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
-import { motion } from "framer-motion";
 import GitHubCalendar from "react-github-calendar";
 
 function Github() {
   const selectLastHalfYear = (contributions) => {
-    const currentYear = new Date().getFullYear();
+    const currentYear = new Date("2022-03").getFullYear();
     const currentMonth = new Date().getMonth();
     const shownMonths = 8;
 
@@ -21,8 +21,8 @@ function Github() {
       const monthOfDay = date.getMonth();
 
       return (
-        date.getFullYear() === currentYear &&
-        monthOfDay > currentMonth - shownMonths &&
+        date.getFullYear() === currentYear ||
+        monthOfDay > currentMonth - shownMonths ||
         monthOfDay <= currentMonth
       );
     });
@@ -48,12 +48,14 @@ function Github() {
         </Heading>
       </Box>
       <VStack>
-        <Box>
+        <Tooltip label="GitHup Calendar" hasArrow>
+        <Box border='1px solid white' color='white' borderRadius={5} bg={useColorModeValue("#2e3440", "#2e3440")} p='5'>
           <GitHubCalendar
             username="abdus786salam"
             transformData={selectLastHalfYear}
           />
         </Box>
+          </Tooltip>
 
         <SimpleGrid
           p="5"

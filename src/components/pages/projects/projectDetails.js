@@ -5,7 +5,7 @@ import {
   SiReact,
   SiChakraui,
   SiRedux,
-  SiStyledcomponents,
+  // SiStyledcomponents,
 } from "react-icons/si";
 
 export const projectDetails = [
@@ -23,7 +23,7 @@ export const projectDetails = [
       { logo: SiJavascript, name: "JavaScript", color: "yellow.400" },
       { logo: SiReact, name: "React", color: "blue.400" },
       { logo: SiChakraui, name: "Chakra", color: "blue.400" },
-      { logo: SiStyledcomponents, name: "Styled Components", color: "brown" },
+      // { logo: SiStyledcomponents, name: "Styled Components", color: "brown" },
     ],
   },
   {
@@ -39,7 +39,7 @@ export const projectDetails = [
       { logo: SiCss3, name: "CSS", color: "blue" },
       { logo: SiJavascript, name: "JavaScript", color: "yellow.400" },
       { logo: SiReact, name: "React", color: "blue.400" },
-      { logo: SiChakraui, name: "Chakra-UI", color: "blue.400" },
+      { logo: SiChakraui, name: "Chakra", color: "blue.400" },
     ],
   },
   {

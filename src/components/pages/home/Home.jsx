@@ -1,20 +1,17 @@
 import {
   Box,
   Heading,
-  Text,
   Stack,
   Link,
   useColorModeValue,
   Icon,
   Flex,
   Img,
-  Center,
   Tooltip,
-  Divider,
 } from "@chakra-ui/react";
 import React from "react";
 import "./Home.css";
-import { MdWavingHand, MdDownload } from "react-icons/md";
+import { MdWavingHand } from "react-icons/md";
 import {  HiDownload } from "react-icons/hi";
 
 const Home = () => {
@@ -59,7 +56,7 @@ const Home = () => {
         >
           Full Stack Web Developer
         </Heading>
-        <Link href="./assets/Abdus_Salam_Resume.pdf" download>
+        <Link href="./assets/Abdus_Salam_Resume.pdf" target={"_blank"} download>
           <Tooltip label="download resume" hasArrow>
             <Box
               as="button"

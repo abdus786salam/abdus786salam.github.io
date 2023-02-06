@@ -30,8 +30,6 @@ const ProjectBox = ({
       boxShadow="outline"
       rounded="md"
       p={{ base: 5, md: 10 }}
-      // mx={50}
-      gap={10}
     >
       <Box>
         <VStack spacing={5}>
@@ -79,6 +77,7 @@ const ProjectBox = ({
                 <a
                   href={projectGithubLink}
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <span>
                     <Icon as={SiGithub} boxSize={8} />
@@ -86,10 +85,11 @@ const ProjectBox = ({
                 </a>
               </Button>
             </Tooltip>
-            <Tooltip label="Code Base" hasArrow>
+            <Tooltip label="project live link" hasArrow>
               <a
                 href={projectDeployLink}
                 target="_blank"
+                rel="noreferrer"
               >
                 <Button
                   fontSize="xl"

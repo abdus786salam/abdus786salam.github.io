@@ -41,7 +41,7 @@ const Contact = () => {
         </HStack>
         <HStack>
           <Icon as={MdLocationPin} />{" "}
-          <span>Bihar</span>
+          <span>Bihar (India)</span>
         </HStack>
         <HStack mt={10}>
           <Tooltip label="GitHub" hasArrow>

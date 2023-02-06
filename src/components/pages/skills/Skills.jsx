@@ -1,14 +1,11 @@
 import {
-  Box,
   Heading,
   HStack,
-  SimpleGrid,
   useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
 import Marquee from "react-fast-marquee";
-import Button from "./button/Button";
 import SkillBox from "./SkillBox";
 import html from "./skillsImage/html.svg";
 import css from "./skillsImage/css.svg";

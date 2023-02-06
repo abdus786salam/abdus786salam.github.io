@@ -7,7 +7,7 @@ const Projects = () => {
     <VStack
       py={50}
       id="projects"
-      px={{ base: 10, lg: 100 }}
+      px={{ base: 5, lg: 100 }}
       bg={useColorModeValue("purple.100", "black.500")}
     >
       <Heading
@@ -21,8 +21,9 @@ const Projects = () => {
         Projects
       </Heading>
       <Grid
+        
         templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(2, 1fr)" }}
-        gap={6}
+        gap={5}
       >
         {projectDetails.map((project, i) => (
           <ProjectBox key={i} {...project} />
