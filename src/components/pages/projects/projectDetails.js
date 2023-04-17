@@ -26,22 +26,22 @@ export const projectDetails = [
       // { logo: SiStyledcomponents, name: "Styled Components", color: "brown" },
     ],
   },
-  {
-    projectTitle: "Trouper.com",
-    projectType: "Group",
-    projectImage: "../assets/projectStuff/trouper.JPG",
-    projectGithubLink: "https://github.com/mr-ashu/Trouper",
-    projectDeployLink: "https://jazzy-lokum-73584a.netlify.app/",
-    projectDiscription: `Trouper.com is a freelancing website where users and appoint freelancer for 
-    projects or can register as freelancer to provide various services.`,
-    techStack: [
-      { logo: SiRedux, name: "Redux", color: "purple" },
-      { logo: SiCss3, name: "CSS", color: "blue" },
-      { logo: SiJavascript, name: "JavaScript", color: "yellow.400" },
-      { logo: SiReact, name: "React", color: "blue.400" },
-      { logo: SiChakraui, name: "Chakra", color: "blue.400" },
-    ],
-  },
+//   {
+//     projectTitle: "Trouper.com",
+//     projectType: "Group",
+//     projectImage: "../assets/projectStuff/trouper.JPG",
+//     projectGithubLink: "https://github.com/mr-ashu/Trouper",
+//     projectDeployLink: "https://jazzy-lokum-73584a.netlify.app/",
+//     projectDiscription: `Trouper.com is a freelancing website where users and appoint freelancer for 
+//     projects or can register as freelancer to provide various services.`,
+//     techStack: [
+//       { logo: SiRedux, name: "Redux", color: "purple" },
+//       { logo: SiCss3, name: "CSS", color: "blue" },
+//       { logo: SiJavascript, name: "JavaScript", color: "yellow.400" },
+//       { logo: SiReact, name: "React", color: "blue.400" },
+//       { logo: SiChakraui, name: "Chakra", color: "blue.400" },
+//     ],
+//   },
   {
     projectTitle: "CoSchedule",
     projectType: "Individual",
